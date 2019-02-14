@@ -44,16 +44,22 @@ app.get('/', (req, res) => {
   //   ]
   // });
 
-  res.send('<h1>Hello Prashant!</h1><h2>How do you do?</h2>');
+
   res.render('home.hbs', {
     pageTitle: 'Home Page',
-    welcomeMessage: 'Welcome to my website.',
+    welcomeMessage: 'Welcome to my website.'
   });
 });
 
 app.get('/about', (req, res) => {
-  res.render('about.hbs', {
-    pageTitle: 'About page',
+  res.render('about.hbs',{
+    pageTitle: 'About page'
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects'
   });
 });
 
